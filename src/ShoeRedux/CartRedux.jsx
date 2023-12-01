@@ -25,7 +25,7 @@ class CartRedux extends Component {
                 <td>{item.name}</td>
                 <td>{item.price* item.soLuong}</td>
                 <td>
-                  <img src={item.image} alt="" className="w-25" />
+                  <img src={item.image} alt="" className="w-50" />
                 </td>
                 <td>
                   <button

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 class DetailRedux extends Component {
   render() {
-    let {detail} = this.props;
+    let { detail } = this.props;
     return (
       <div className="row pt-5">
         <div className="col-4">
@@ -11,13 +11,13 @@ class DetailRedux extends Component {
           <img src={detail.image} className="w-50" alt="" />
         </div>
         <div className="col-8">
-          <table>
+          <table className="table" border="5">
             <thead>
               <tr>
                 <strong
                   style={{
                     position: "relative",
-                    left: "350px",
+                    left: "400px",
                     fontSize: "18px",
                   }}
                 >
@@ -30,38 +30,31 @@ class DetailRedux extends Component {
                 <td>
                   <strong>Id</strong>
                 </td>
-                <span>{detail.id}</span>
-                <td></td>
+                <td>{detail.id}</td>
               </tr>
               <tr>
                 <td>
                   <strong>Alias</strong>
                 </td>
-                <td>
-                  <span>{detail.alias}</span>
-                </td>
+                <td>{detail.alias}</td>
               </tr>
               <tr>
                 <td>
                   <strong>Description</strong>
                 </td>
-                <td>
-                  <span>{detail.description}</span>
-                </td>
+                <td>{detail.description}</td>
               </tr>
               <tr>
                 <td>
                   <strong>Short description</strong>
                 </td>
-                <span>{detail.shortDescription}</span>
-                <td></td>
+                <td>{detail.shortDescription}</td>
               </tr>
               <tr>
                 <td>
                   <strong>Quantity</strong>
                 </td>
-                <span>{detail.quantity}</span>
-                <td></td>
+                <td>{detail.quantity}</td>
               </tr>
             </tbody>
           </table>
@@ -71,10 +64,10 @@ class DetailRedux extends Component {
   }
 }
 
-let mapStateToProps = (state) =>{
-    return{
-        detail: state.detail,
-    }
-}
+let mapStateToProps = (state) => {
+  return {
+    detail: state.detail,
+  };
+};
 
 export default connect(mapStateToProps)(DetailRedux);
